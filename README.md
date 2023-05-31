@@ -23,15 +23,17 @@ The data set named “Hospital Length of Stay” is used in this project, which 
 
 # 2. Dimensionality reduction
 
-2.1. Correlation analysis. 
+2.1. Correlation analysis.
+
 Filter the numeric features with low correlation with "lengthofstay".
 
-![image](https://github.com/ansonwcy/lengthOfStay_prediction/assets/106443496/97226aec-6f1a-4a97-8b7e-5f74bd197ae6)
+![image](assets/correlation.jpg)
 
 2.2. Random forest classifier.
+
 Filter the features with low importantance.
 
-![image](https://github.com/ansonwcy/lengthOfStay_prediction/assets/106443496/f0c56871-4d9e-4fa0-8886-fb6e1b895230)
+![image](assets/importance.jpg)
 
 # 3. Compare different regression models
 
@@ -39,39 +41,39 @@ Filter the features with low importantance.
 
 Build linear regression models with all selected features and the combination of them (prediction graphs are plot in the ipynb file).
 
-![image](https://github.com/ansonwcy/lengthOfStay_prediction/assets/106443496/31d868ae-18ec-47aa-9325-4ce2e6971b90)
+![image](assets/linear_regression.png)
 
 The best one in terms of r2 score is "numberOfBooleanFeature".
 
-![image](https://github.com/ansonwcy/lengthOfStay_prediction/assets/106443496/93f250b9-ddc3-4dc2-9a49-d30dccb47ae7)
+![image](assets/best_linear.png)
 
 ## 3.2. Feedforward Neural Networks
 
 Build feedforward neural networks models with 3 hidden layer and [1, 4, 16, 64, 128] hidden units.
 
-![image](https://github.com/ansonwcy/lengthOfStay_prediction/assets/106443496/3b4c3454-47e3-49c8-98ef-40c5644e3281)
+![image](assets/nn.png)
 
 ## 3.3. Decision Tree (with/without bagging)
 
 Build decision tree models with tree depth of [1, 3, 5, 7, 9, 11, 13, 15, 17, 19] and number of bagging tree of [1, 5, 10, 30, 50].
 
-![image](https://github.com/ansonwcy/lengthOfStay_prediction/assets/106443496/e5092375-af0a-4562-98d0-d66bcc62a3a4)
+![image](assets/dt.png)
 
 ## 3.4. Gradient boosting tree (with/without bagging)
 
 3.4.1. (Without bagging) Build gradient boosting tree models with tree depth of [1, 3, 5, 7, 9, 11, 13, 15, 17, 19] and number of tree ensemble of [1, 5, 10, 30, 50].
 
-![image](https://github.com/ansonwcy/lengthOfStay_prediction/assets/106443496/ce4aad6b-8e9d-4ce1-817d-a709630cc6b7)
+![image](assets/gbt.png)
 
 3.4.2. (With bagging) Build gradient boosting tree models with tree depth of [3, 4, 5, 6, 7], number of tree ensemble of [50], and number of bagging tree of [2, 5, 8, 11].
 
-![image](https://github.com/ansonwcy/lengthOfStay_prediction/assets/106443496/62804a02-6d82-4f23-97c6-5097bc3a6ad7)
+![image](assets/gbt_bagging.png)
 
 # 4. Conclusion
 
 The best models amoung different type of models. The best one is gradient boosting tree (with bagging) with tree depth of 5, number of bagging tree of 11, and number of tree ensemble of 50.
 
-![image](https://github.com/ansonwcy/lengthOfStay_prediction/assets/106443496/7ae0faca-0e86-4f54-9727-ebef246e5dfb)
+![image](assets/conclusion.png)
 
 # 5. Prediction on test set
 
